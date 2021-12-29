@@ -15,7 +15,7 @@ app.get('/api/news/:query', (req, res) => {
 
     // todo: security-> need to clean query
 
-    NewsApiKit.getEverythingNews('query')
+    NewsApiKit.getEverythingNews(query)
         .then(response => JSON.parse(response.text))
         .then(data => {
             // console.log(data);
